@@ -14,7 +14,7 @@
  *= require_self
  */
 
- $brand-primary: red;
+ $brand-primary: #FF551B;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -22,5 +22,10 @@
 .bgray {
 	margin-top: 20px;
 	background-color: #f4f4f4;
-	width: 300px;
+	width: 400px;
+}
+
+
+.users .background {
+background: url('people.jpg')
 }

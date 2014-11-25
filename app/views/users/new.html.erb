@@ -1,21 +1,30 @@
 <% @user.errors.each do |field, error| %>
 	<p><%= "#{field} #{error}" %></p>
 <% end %>
-<div class="row">
-  	<div class="col-md-4 col-md-offset-4 bgray" style="padding: 30px">
 
-		<%= form_for @user do |f| %>
-			<%= f.label :avatar %>
-			<%= f.file_field :avatar %>
-			<%= image_tag @user.avatar.url, class: "img-circle" %>
-			</br>
-			<%= f.label :name %>
-			<%= f.text_field :name, class: "form-control" %>
-			</br>
-			<%= f.label :description %>
-			<%= f.text_field :description, class: "form-control" %>
-			</br>
-			<%= f.submit class: "btn btn-primary btn-sm" %>
-		<% end %>
+<div class="users background">
+	<img src="../app/assets/images/people.jpg" alt="background_users"  />
+	<div class="row">
+	  	<div class="col-md-4 col-md-offset-4 bgray" style="padding: 30px">
+
+			<%= form_for @user do |f| %>
+				<%= f.label :avatar %>
+				<%= f.file_field :avatar %>
+				</br>
+				<%= f.label :name %>
+				<%= f.text_field :name, class: "form-control" %>
+				</br>
+				<%= f.label :email %>
+				<%= f.text_field :email, class: "form-control" %>
+				</br>
+				<%= f.label :location %>
+				<%= f.select(:location, ['Barcelona', 'Madrid', 'Valencia', 'Sevilla', 'Item 4'], {}, {:class => 'form-control mtop'})%>
+				</br>
+				<%= f.label :description %> (optional)
+				<%= f.text_field :description, class: "form-control" %>
+				</br>
+				<%= f.submit class: "btn btn-primary btn-sm" %>
+			<% end %>
+		</div>
 	</div>
 </div>
