@@ -44,3 +44,4 @@ gem 'gravatar_image_tag'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 
+

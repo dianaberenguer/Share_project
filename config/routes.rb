@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root to: 'site#home'
 
-  resources :users
+  resources :users do
+    resources :items
+  end
 
   # nombre del controller#model
 

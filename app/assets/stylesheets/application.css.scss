@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+.users .background {
+	 background-image: url("https://dl-web.dropbox.com/get/share/people.jpg?_subject_uid=43165086&w=AADAXs4rWF224TCLbEqd64VkQu6rV4uUve0O0vLGqf36dw" alt="background_users") no-repeat center center fixed; 
+}
 
  $brand-primary: #FF551B;
 
@@ -20,12 +23,13 @@
 @import "bootstrap";
 
 .bgray {
-	margin-top: 20px;
+	margin-top: 40px;
 	background-color: #f4f4f4;
 	width: 400px;
 }
 
-
-.users .background {
-background: url('people.jpg')
+.date {
+	display: inline-block;
+	width: 110px;
+	padding: 6px 6px;
 }
