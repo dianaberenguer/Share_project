@@ -1,3 +1,28 @@
-.img .people {
-	background:  url(people.jpg);
+/*.img .people {
+	background:  url('people.jpg');
+}*/
+
+.bgimage {
+	height: 750px;
+	position: relative;
+	background-size: cover;
+  display: block;
+	background: url('https://dl-web.dropbox.com/get/share/girl2.jpg?_subject_uid=43165086&w=AADJG8QZO3x6_yygRYB69m6zMbY2xG8X_YVn0ow-bqYxYA');
+	background-attachment: fixed;
+  background-repeat: no-repeat;
 }
+
+.menu {
+	display:inline-block;
+}
+
+.info {
+display: inline-block;
+vertical-align: middle;
+font-size: 18px;
+line-height: 28px;
+color: #fff;
+width: 100%;
+text-align: center;
+}
+
