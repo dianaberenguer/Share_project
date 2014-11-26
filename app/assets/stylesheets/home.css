@@ -2,19 +2,31 @@
 	background:  url('people.jpg');
 }*/
 
-.bgimage {
-	height: 750px;
-	position: relative;
-	background-size: cover;
-  display: block;
-	background: url('https://dl-web.dropbox.com/get/share/girl2.jpg?_subject_uid=43165086&w=AADJG8QZO3x6_yygRYB69m6zMbY2xG8X_YVn0ow-bqYxYA');
-	background-attachment: fixed;
-  background-repeat: no-repeat;
+* {
+	padding: 0;
+	margin: 0;
 }
 
+main {
+	height: 785px;
+	position: relative;
+  display: block;
+	background: url('https://dl-web.dropbox.com/get/share/girl2.jpg?_subject_uid=43165086&w=AADJG8QZO3x6_yygRYB69m6zMbY2xG8X_YVn0ow-bqYxYA');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: 1111;
+}
+
+
+}
 .menu {
 	display:inline-block;
 }
+
 
 .info {
 display: inline-block;
