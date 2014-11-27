@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
 
+	layout "layout_item"
+
 	def new
 		@item = Item.new
 		@user = User.find(params[:user_id])
@@ -19,7 +21,8 @@ class ItemsController < ApplicationController
 	end
 
 	def show
-		@item = Item.find(params[:id])
+		@user = User.find_by id: params[:item_id]
+		@items = @user.item
 	end
 
 	private

@@ -1,8 +1,8 @@
-<div class="row">
-  	<div class="col-md-4 col-md-offset-4 bgray" style="padding: 30px">
-  		<div>
-		<%= image_tag @item.picture.url(:medium) %>
-		</div>
+<h1> items </h1>
+<ul>
+ <% @items.each do |item| %>
+   <li>
+       <%= image_tag @item.picture.url(:medium) %>
 		<%= @item.name %>
 		</br>
 		<%= @item.date %>
@@ -10,5 +10,10 @@
 		<%= @item.description %>
 		</br>
 		<%= @user.price %> €
-	</div>
-</div>
+   </li>
+ <% end %>
+</ul>
+<%= link_to('Index', projects_path()) %>
+<%= link_to('New entry', new_project_entry_path()) %>
+
+

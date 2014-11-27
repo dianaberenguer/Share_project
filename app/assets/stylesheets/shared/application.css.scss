@@ -14,15 +14,14 @@
  *= require_self
  */
 
+$brand-primary: #e14820;
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
-// .bgray {
-// 	margin-top: 40px;
-// 	background-color: #f4f4f4;
-// 	width: 400px;
-// }
+
 
 // .date {
 // 	display: inline-block;
