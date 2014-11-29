@@ -7,13 +7,16 @@
   <%= csrf_meta_tags %>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<nav class="<%= yield :header %>"></nav>
+
 <body class="<%= yield :background %>">
 
-	<% if flash[:notice].present? %>
-	<p class="alert alert-success"><%= flash[:notice] %></p>
-	<% end %>
-
 	<div class="container">
+
+		<% if flash[:notice].present? %>
+		<p class="alert alert-success"><%= flash[:notice] %></p>
+		<% end %>
+
 		<%= yield %>
 	</div>
 

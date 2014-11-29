@@ -1,15 +1,35 @@
-<h1> items </h1>
-<ul>
- <% @items.each do |item| %>
-   <li>
-       <%= image_tag item.picture.url(:medium) %>
-		<%= item.name %>
-		</br>
-		<%= item.date %>
-		</br>
-		<%= item.description %>
-		</br>
-		<%= item.price %> €
-   </li>
- <% end %>
-</ul>
+<%= content_for	:header do %>
+	<div class="container" id="nav">
+		<div id="logo">
+			<%= image_tag("logo-small.png", :alt => "logo") %>
+		</div>
+		<div id="head-btn">
+			<button class= "btn btn-primary">+ Create item</button>
+			<button class= "btn">New user</button>
+		</div>
+		<div id="search">
+			<input type="search"/>
+		</div>
+	</div>
+<% end %>
+
+<div id="list" class="row">
+	<ul>
+	 <% @items.each do |item| %>
+	   <li id="item" class="col-xs-6 col-md-4">
+	       <%= image_tag item.picture.url(:medium) %>
+			<%= item.name %>
+			</br>
+			<%= item.date %>
+			</br>
+			<%= item.description %>
+			</br>
+			<%= item.price %> €
+	   </li>
+	 <% end %>
+	   <div>
+		   <button class= "btn btn-primary btn-xs">Share it!</button>
+		   <button class= "btn btn-xs">View</button>
+	   </div>
+	</ul>
+</div>
