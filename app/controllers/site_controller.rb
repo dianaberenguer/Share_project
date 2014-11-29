@@ -1,8 +1,6 @@
 class SiteController < ApplicationController
 
-	layout "layout_home"
-
 	def home
-		# render 'home'
+		render 'home', layout: false
 	end
 end

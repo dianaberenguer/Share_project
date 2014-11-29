@@ -10,27 +10,35 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
-.users .background {
-	 background-image: url("https://dl-web.dropbox.com/get/share/people.jpg?_subject_uid=43165086&w=AADAXs4rWF224TCLbEqd64VkQu6rV4uUve0O0vLGqf36dw" alt="background_users") no-repeat center center fixed; 
-}
 
- $brand-primary: #FF551B;
+$brand-primary: #e14820;
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+html, body {
+	height: 100%;
+	width:100%;
+}
+
+body {
+	&.item {
+		background: url('https://dl-web.dropbox.com/get/share/camping_luxe.jpg?_subject_uid=43165086&w=AAArZ-2mHz4F4UAP4dZgSa-uhReP2aGtgYjfxca-1ogx0w')no-repeat center center fixed;
+	}
+	
+	&.user {
+		background: url('https://dl-web.dropbox.com/get/share/friends.jpg?_subject_uid=43165086&w=AAAo6gCJO0iUk-yPQb0nlQ8wpQCQm1QWLgx0ih20crIrMw') no-repeat center center fixed;
+	}
+	background-size: cover;
+}
+
 
 .bgray {
 	margin-top: 40px;
-	background-color: #f4f4f4;
+	background: rgba(255,255,255,0.8);
 	width: 400px;
 }
-
-.date {
-	display: inline-block;
-	width: 110px;
-	padding: 6px 6px;
-}
-

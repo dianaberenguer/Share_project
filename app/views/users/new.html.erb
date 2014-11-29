@@ -1,6 +1,10 @@
-<main>	<% @user.errors.each do |field, error| %>
-		<p><%= "#{field} #{error}" %></p>
-	<% end %>
+<% content_for :background  do %>
+	user
+<% end %>
+
+<% @user.errors.each do |field, error| %>
+	<p><%= "#{field} #{error}" %></p>
+<% end %>
 
 	<div class="users background">
 		<div class="row">

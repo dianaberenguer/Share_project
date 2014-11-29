@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :items
   end
 
+   resources :items, only: [:index]
+
   # nombre del controller#model
 
   # The priority is based upon order of creation: first created -> highest priority.

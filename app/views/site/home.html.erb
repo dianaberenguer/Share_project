@@ -1,5 +1,14 @@
-<main>
-	<nav>
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>ShareProject</title>
+	  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= stylesheet_link_tag  'home', media: 'all', 'data-turbolinks-track' => true %>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	</head>
+	<body>
+
 		<ul class="sm">
 			<li class="ib ">Follow us: </li>
 			<li class="ib fa fa-twitter" alt="Twitter"></li>
@@ -7,23 +16,31 @@
 			<li class="ib fa fa-google-plus" alt="Google +"></li>
 			<li class="ib fa fa-facebook" alt="Pinterest"></li>
 		</ul>
-	</nav>
 
-	<div class="info">
-		<%= image_tag("logo-big.png", :alt => "logo") %>
-		<p>Where you will save money sharing with friends.</p>
-		<div class="buttons-home">
-		<button class="btn btn-default">Have a look!</button>
-		<button class="btn btn-primary">Sign up!</button>
+		<div class="info">
+			<%= image_tag("logo-big.png", :alt => "logo", class: "img-responsive") %>
+			<p>Where you will save money sharing with friends.</p>
+			<div class="buttons-home">
+			<button class="btn btn-default">Have a look!</button>
+			<button class="btn btn-primary">Sign up!</button>
+			</div>
 		</div>
-	</div>
 
-	<footer>
-		<ul class="menu">
-			<li class="ib">Contact us</li>
-			<li class="ib">Policy</li>
-			<li class="ib">Save & Share ©</li>
-		</ul>
-	</footer>
+		<footer>
+			<ul class="menu">
+				<li class="ib">Contact us</li>
+				<li class="ib">Policy</li>
+				<li class="ib">Save &amp; Share &copy;</li>
+			</ul>
+		</footer>
 
-</main>
+	</body>
+</html>
+
+
+
+
+
+
+
+

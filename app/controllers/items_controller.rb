@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
 
-	layout "layout_item"
 
 	def new
 		@item = Item.new
@@ -10,10 +9,11 @@ class ItemsController < ApplicationController
 	def create
 		@user = User.find(params[:user_id])
 		@item = Item.new(entry_params)
+		@item.users << @user
 
-		if @user.save
-			flash[:notice] = "User has been created succesfully"
-			redirect_to root_path
+		if @item.save
+			flash[:notice] = "Item has been created succesfully"
+			redirect_to items_path
 
 		else
 			render 'new'
@@ -21,14 +21,23 @@ class ItemsController < ApplicationController
 	end
 
 	def show
-		@user = User.find_by id: params[:item_id]
-		@items = @user.item
+		@user = User.find(params[:user_id])
+		@item = Item.find(params[:id])
+	end
+
+	def index
+		if params[:user_id]
+		 	@user = User.find(params[:user_id])
+			@items = @user.items
+		else
+			@items = Item.all
+		end
 	end
 
 	private
 
 	def entry_params
-		params.require(:item).permit(:name, :picture, :price, :date, :description)
+		params.require(:item).permit(:name, :picture, :price, :date, :description, :user_id)
 	end
 
 

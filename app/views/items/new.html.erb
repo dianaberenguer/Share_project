@@ -1,4 +1,8 @@
-<main>
+<% content_for :background  do %>
+	item
+<% end %>
+
+
 	<% @item.errors.each do |field, error| %>
 		<p><%= "#{field} #{error}" %></p>
 	<% end %>
@@ -28,4 +32,3 @@
 			</div>
 		</div>
 </div>
-</main>

@@ -5,23 +5,25 @@
   <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body class="<%= yield :background %>">
 
 	<% if flash[:notice].present? %>
 	<p class="alert alert-success"><%= flash[:notice] %></p>
 	<% end %>
 
-<%= yield %>
+	<div class="container">
+		<%= yield %>
+	</div>
 
-<footer>
+	<footer>
 		<ul class="menu">
 			<li class="ib">Contact us</li>
 			<li class="ib">Policy</li>
-			<li class="ib">Save & Share ©</li>
+			<li class="ib">Save &amp; Share &copy;</li>
 		</ul>
-</footer>
+	</footer>
 
 </body>
 

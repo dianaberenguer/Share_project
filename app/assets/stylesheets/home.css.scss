@@ -1,8 +1,12 @@
+html, body  {
+	height: 100%;
+	width:100%;
+}
 
-main {
-	height: 785px;
+
+body {
 	position: relative;
-  display: block;
+  display:table;
 	background: url('https://dl-web.dropbox.com/get/share/girl2.jpg?_subject_uid=43165086&w=AADJG8QZO3x6_yygRYB69m6zMbY2xG8X_YVn0ow-bqYxYA');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -10,8 +14,8 @@ main {
 	background-size: cover;
 	background-attachment: fixed;
   background-repeat: no-repeat;
-  z-index: 1111;
-  /*-webkit-filter: grayscale(0.4);*/
+  // z-index: 1111;
+  // -webkit-filter: grayscale(0.4);
 }
 
 
@@ -23,11 +27,12 @@ main {
 	bottom:0px;
 }
 
-nav {
+.sm {
 	color: #fff;
 	text-align: right;
-	margin-left: 20px;
-
+	position: absolute;
+	top:10px;
+	right:20px;
 }
 
 
@@ -40,13 +45,16 @@ nav {
 
 
 .info {
-margin-top: 250px;
-/*vertical-align: middle;*/
-font-size: 18px;
-line-height: 28px;
-color: #fff;
-width: 100%;
-text-align: center;
+	display:table-cell;
+	vertical-align:middle;
+	font-size: 18px;
+	line-height: 28px;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	img {
+		margin:0 auto;
+	}
 }
 
 

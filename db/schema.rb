@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124174716) do
+ActiveRecord::Schema.define(version: 20141127171501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "items", force: true do |t|
-    t.integer  "item_id"
     t.string   "name"
     t.string   "picture"
     t.string   "price"
@@ -25,6 +24,10 @@ ActiveRecord::Schema.define(version: 20141124174716) do
     t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "participations", force: true do |t|

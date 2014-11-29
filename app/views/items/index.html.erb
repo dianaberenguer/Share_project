@@ -1,0 +1,15 @@
+<h1> items </h1>
+<ul>
+ <% @items.each do |item| %>
+   <li>
+       <%= image_tag item.picture.url(:medium) %>
+		<%= item.name %>
+		</br>
+		<%= item.date %>
+		</br>
+		<%= item.description %>
+		</br>
+		<%= item.price %> €
+   </li>
+ <% end %>
+</ul>
