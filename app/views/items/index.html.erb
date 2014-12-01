@@ -16,19 +16,23 @@
 <div id="list" class="row">
 	<ul>
 		<% @items.each do |item| %>
-			<li id="item" class="col-xs-6 col-md-4">
-			   <%= image_tag item.picture.url(:medium) %>
+			<li id="item" class="col-md-4 col-xs-6">
+				<div id="itemImg">
+			   		<%= image_tag item.picture.url(:medium) %>
+				</div>
 					</br>
-				<p id="ItemName"> <%= item.name %> </p>
-				</br>
-				<%= item.date %>
+				<p id="itemName"> <%= item.name %> </p>
 				</br>
 				<%= item.description %>
 				</br>
 				<%= item.price %> €
 				</br>
-				<button class= "btn btn-primary btn-xs">Share it!</button>
-				<button class= "btn btn-xs">View</button>
+				<%= item.date %>
+				</br>
+				<div id="BtnItem">
+					<button class= "btn btn-sm btn-primary">Share it!</button>
+					<button class= "btn btn-sm">View</button>
+				</div>
 			</li>
 		<% end %>
 	</ul>

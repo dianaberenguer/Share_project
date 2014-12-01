@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
 		if @user.save
 			flash[:notice] = "User has been created succesfully"
-			render 'items'
+			render 'show'
 
 		else
 			render 'new'
