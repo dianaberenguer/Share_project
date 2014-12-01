@@ -1,10 +1,10 @@
 <%= content_for	:header do %>
 	<div class="container" id="nav">
 		<div id="logo">
-			<%= image_tag("logo-small.png", :alt => "logo") %>
+			<%= image_tag("logo-small.png", alt: "logo") %>
 		</div>
 		<div id="head-btn">
-			<button class= "btn btn-primary">+ Create item</button>
+			<a class= "btn btn-primary">+ Create item</a>
 			<button class= "btn">New user</button>
 		</div>
 		<div id="search">
@@ -15,21 +15,21 @@
 
 <div id="list" class="row">
 	<ul>
-	 <% @items.each do |item| %>
-	   <li id="item" class="col-xs-6 col-md-4">
-	       <%= image_tag item.picture.url(:medium) %>
-			<%= item.name %>
-			</br>
-			<%= item.date %>
-			</br>
-			<%= item.description %>
-			</br>
-			<%= item.price %> €
-	   </li>
-	 <% end %>
-	   <div>
-		   <button class= "btn btn-primary btn-xs">Share it!</button>
-		   <button class= "btn btn-xs">View</button>
-	   </div>
+		<% @items.each do |item| %>
+			<li id="item" class="col-xs-6 col-md-4">
+			   <%= image_tag item.picture.url(:medium) %>
+					</br>
+				<p id="ItemName"> <%= item.name %> </p>
+				</br>
+				<%= item.date %>
+				</br>
+				<%= item.description %>
+				</br>
+				<%= item.price %> €
+				</br>
+				<button class= "btn btn-primary btn-xs">Share it!</button>
+				<button class= "btn btn-xs">View</button>
+			</li>
+		<% end %>
 	</ul>
 </div>
