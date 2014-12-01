@@ -1,3 +1,14 @@
+<%= content_for	:header do %>
+	<div class="container" id="nav">
+		<div id="logo">
+			<%= image_tag("logo-small.png", alt: "logo") %>
+		</div>
+		<div id="search">
+			<input type="search"/>
+		</div>
+	</div>
+<% end %>
+
 <% content_for :background  do %>
 	item
 <% end %>

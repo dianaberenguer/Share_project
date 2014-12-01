@@ -73,6 +73,15 @@ nav {
 	outline:none;
 }
 
+.btn-secondary {
+	background-color: #e9e9e9;
+}
+
+.btn-secondary:hover {
+	color:$brand-primary;
+	background-color: #dadada;
+}
+
 #sm-logo {
 	width: 210px;
 }
