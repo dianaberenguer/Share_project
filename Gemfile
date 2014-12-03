@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use postgresql as the database for Active Record
@@ -46,5 +45,3 @@ gem 'gravatar_image_tag'
 gem 'bootstrap-sass', '~> 3.3.1'
 
 gem "font-awesome-rails"
-
-

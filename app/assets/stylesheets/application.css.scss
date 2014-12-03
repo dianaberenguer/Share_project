@@ -32,32 +32,26 @@ html, body {
 nav {
 	background-color: $brand-background;
 	opacity: 0.9;
-	width:100%;
-	height: 60px;
-	margin: 0px;
-	position: fixed;
-	z-index: 10;
-	top:0;
-	div {
-		display:inline-block;
-		margin-top: 7px;
-	}
-	#logo {
-		margin-left: 40px;
-	}
+
 	#search {
 		position: fixed;
 		right:20px;
+		top: 6px;
 		margin-right:20px;
 	}
+
 	#head-btn {
-		position: fixed;
-		right:77px;
 		margin-right:120px;
 		.btn {
-		font-weight: bold;
-		margin-right:10px;
-		border:none;
+			margin-right: 3px;
+			padding: 6px 12px;
+			font-weight: bold;
+			border:none;
+		}
+
+		.btn-primary:hover {
+			background-color: #b63918;
+			border-color: #962f14;
 		}
 	}
 
@@ -76,12 +70,12 @@ nav {
 }
 
 .btn-secondary {
-	background-color: #e9e9e9;
+	background-color: #e9e9e9!important;
 }
 
 .btn-secondary:hover {
 	color:$brand-primary;
-	background-color: #dadada;
+	background-color: #dadada!important;
 }
 
 #sm-logo {
