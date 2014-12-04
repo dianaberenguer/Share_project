@@ -42,17 +42,6 @@ nav {
 
 	#head-btn {
 		margin-right:120px;
-		.btn {
-			margin-right: 3px;
-			padding: 6px 12px;
-			font-weight: bold;
-			border:none;
-		}
-
-		.btn-primary:hover {
-			background-color: #b63918;
-			border-color: #962f14;
-		}
 	}
 
 }
@@ -101,11 +90,8 @@ body {
 	width: 400px;
 }
 
-.bg-gray {
-	margin-top: 40px;
-	background-color: #f4f4f4;
-	width: 400px;
-	border-radius: 4px;
+.bg-orange {
+	border: 1px solid #e14820;
 }
 
 
@@ -113,11 +99,16 @@ body {
 	padding:10px;
 }
 
+.form {
+	padding:0 20px 20px 20px;
+}
+
 input[type=search] {
 	background: #f4f4f4 url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
 	border: solid 1px #f4f4f4;
 	padding: 8px 9px 8px 32px;
 	width: 55px;
+	z-index:3;
 
 
 	-webkit-border-radius: 7em;
@@ -171,7 +162,8 @@ footer {
 	text-align:right;
 	margin-right:20px;
 	margin-top:60px;
-	position: fixed;
+	position:fixed;
+
 }
 
 .date {
@@ -225,4 +217,16 @@ h4 {
 
 p {
 	margin:0px;
+}
+
+#nav-header {
+	padding-top:10px;
+}
+
+.tmargin {
+	margin: 10px 0;
+}
+
+h2 {
+	color: $brand-secondary;
 }
