@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
     	t.string :name
     	t.attachment :avatar
-    	t.string :email
+      t.string :email, null: false, default: ""
       t.timestamps
     end
   end

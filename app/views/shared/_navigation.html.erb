@@ -1,0 +1,30 @@
+<nav class='navbar'>
+  <div class='container' id='nav'>
+    <div class='navbar-header'>
+      <%= link_to image_tag('logo-small.png', alt:'logo'), items_path, class: 'navbar-brand' %>
+    </div>
+
+    <ul class='nav navbar-nav navbar-right' id='head-btn'>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to "Create item", new_user_item_path(current_user), class: 'btn btn-primary navbar-btn'  %>
+        </li>
+        <li>
+          <%= link_to "Logout", destroy_user_session_path, method: 'DELETE', class: 'btn btn-secondary navbar-btn' %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "New user", new_user_registration_path %>
+        </li>
+        <li>
+          <%= link_to "Sign in", new_user_session_path %>
+        </li>
+      <% end %>
+    </ul>
+
+    <div id='search'>
+      <input type='search'>
+    </div>
+
+  </div>
+</nav>
