@@ -35,7 +35,9 @@
 		</div>
 		<div>
 			<a class= "btn btn-secondary" href="/../items"> < Go to index</a>
-			<a class= "btn btn-secondary" href="#"> Change profile</a>
+			
+			<%= link_to('Edit',  new_user(@user), class: "btn btn-secondary")  %>
+			<!-- <a class= "btn btn-secondary" href="#"> Change profile</a> -->
 		</div>
 	</div>
 

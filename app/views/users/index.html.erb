@@ -1,0 +1,39 @@
+<%= content_for	:header do %>
+	<div class="container" id="nav">
+		<div id="logo">
+			<%= image_tag("logo-small.png", alt: "logo") %>
+		</div>
+		<div id="head-btn">
+			<a class= "btn btn-primary" href="users/1/items/new">+ Create item</a>
+			<a class= "btn btn-secondary" href="users/new">New user</a>
+		</div>
+		<div id="search">
+			<input type="search" placeholder="Search"/>
+		</div>
+	</div>
+<% end %>
+
+<div id="users_list" class="row">
+	<ul>
+		<% @users.each do |user| %>
+		  	<div class="col-md-4 col-xs-6 bg-gray" style="padding: 30px">
+				<%= image_tag user.avatar.url(:large), class: "img-rounded" %>
+				<div id="info-user">
+				</br>
+					<h4>Name:</h4>
+					<p><%= user.name %></p>
+					</br>
+					<h4>Location:</h4>
+					<p><%= user.location %></p>
+					</br>
+					<h4>Email:</h4>
+					<p><%= user.email %></p>
+					</br>
+					<h4>Description:</h4>
+					<p><%= user.description %></p>
+					</br>
+				</div>
+			</div>
+		<% end %>
+	</ul>
+</div>

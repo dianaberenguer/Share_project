@@ -20,6 +20,23 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
+	def index
+		@users = User.all
+	end
+
+	def edit
+		@user = current_user.find params[:user_id]
+	end
+
+	def update
+		@user = current_user.find params[:project_id]
+		
+		if @user.update_atribbutes entry_params
+			redirect_to action: :show, controller: :users, user_id: @user_id
+		else
+			render 'edit'
+		end
+	end
 
 private
 
