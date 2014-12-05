@@ -21,8 +21,8 @@
 			<%= image_tag("logo-big.png", :alt => "logo", class: "img-responsive") %>
 			<p>Where you will save money sharing with friends.</p>
 			<div class="buttons-home">
-			<%= link_to 'Sign in', new_user_session_path, class: "btn btn-default" %>
-			<%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %>
+			<%= link_to 'Sign in', new_user_session_path , class: "btn btn-default" %>
+			<%= link_to 'Sign up', new_user_registration_path, method: 'GET',class: "btn btn-primary" %>
 			</div>
 		</div>
 

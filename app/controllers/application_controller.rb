@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :description
     devise_parameter_sanitizer.for(:sign_up) << :location
   end
+
+   def after_sign_in_path_for(resource)
+    items_path
+  end
 end

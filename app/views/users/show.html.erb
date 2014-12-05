@@ -18,8 +18,8 @@
 		</div>
 		<div>
 			<a class= "btn btn-secondary" href="/../items"> < Go to index</a>
-			<%= link_to('Edit',  new_user(@user), class: "btn btn-secondary")  %>
-			<!-- <a class= "btn btn-secondary" href="#"> Change profile</a> -->
+			<%= link_to('Edit',  edit_user_registration_path(current_user), class: "btn btn-secondary")  %>
+			<%= link_to('My items', user_items_path(current_user), class: "btn btn-secondary")  %>
 		</div>
 	</div>
 </div>
