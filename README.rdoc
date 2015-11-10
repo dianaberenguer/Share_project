@@ -1,17 +1,28 @@
 Install Homebrew (package installer for Mac) ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew install git
+
 Ruby installer  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+
 ruby -v (Ruby version)
+
 gem install bundler
+
 brew install postgres
+
 bundle
 
+START POSTGRES
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents 
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist(start postgress)
+
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
 psql postgres
 	CREATE ROLE diana SUPERUSER LOGIN;
 	\q
 
 brew install ImageMagick
+
 rake db:setup
+
 rails server
