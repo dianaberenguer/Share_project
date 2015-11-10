@@ -12,14 +12,19 @@ brew install postgres
 
 bundle
 
+
 START POSTGRES
+
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents 
 
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
 psql postgres
+
 	CREATE ROLE diana SUPERUSER LOGIN;
+	
 	\q
+
 
 brew install ImageMagick
 
